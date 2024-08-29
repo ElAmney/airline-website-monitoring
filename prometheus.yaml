@@ -18,5 +18,7 @@ scrape_configs:
       - source_labels: [__param_target]
         target_label: instance
       - target_label: __address__
-        replacement: host.docker.internal:9115 # For macOS and Windows
-        # replacement: localhost:9115 # For Linux
+        # For macOS and Windows
+        replacement: host.docker.internal:9115 
+        # For Linux
+        # replacement: localhost:9115
