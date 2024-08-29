@@ -3,9 +3,9 @@ services:
   blackbox-exporter:
     image: prom/blackbox-exporter:latest
     command:
-    - --config.file=/etc/blackbox/blackbox.yml
+    - --config.file=/etc/blackbox_exporter/blackbox.yml
     volumes:
-    - ./blackbox/blackbox.yml:/etc/blackbox/blackbox.yml
+    - ./blackbox_exporter/blackbox.yml:/etc/blackbox_exporter/blackbox.yml
     ports:
     - 9115:9115
 
