@@ -8,9 +8,9 @@ scrape_configs:
         module: [http_2xx]
     static_configs:
         - targets:
-            - https://aircanada.com # Air Canada
-            - https://aa.com # American Airlines
-            - https://delta.com # Delta Air Lines
+            - https://www.aircanada.com/home/ca/en/aco/flights # Air Canada
+            - https://www.aa.com/homePage.do?locale=en_US # American Airlines
+            - https://www.southwest.com # Southwest Airlines
             - https://united.com # United Airlines
     relabel_configs:
       - source_labels: [__address__]
