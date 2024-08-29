@@ -2,6 +2,9 @@ services:
 
   blackbox-exporter:
     image: prom/blackbox-exporter:latest
+    container_name: blackbox-exporter
+    restart: always
+    tty: true
     command:
     - --config.file=/etc/blackbox_exporter/blackbox.yml
     volumes:
@@ -15,6 +18,8 @@ services:
     hostname: prometheus
     restart: always
     tty: true
+    command:
+    - --config.file=/etc/prometheus/prometheus.yaml
     volumes:
       - ./prometheus.yaml:/etc/prometheus/prometheus.yaml
     ports:
