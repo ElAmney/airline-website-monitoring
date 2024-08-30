@@ -21,8 +21,24 @@ services:
     command:
     - --config.file=/etc/prometheus/prometheus.yaml
     volumes:
-      - ./prometheus.yaml:/etc/prometheus/prometheus.yaml
+      - ./prometheus/prometheus.yaml:/etc/prometheus/prometheus.yaml
     ports:
       - 9090:9090
     depends_on:
       - blackbox-exporter
+
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    hostname: grafana
+    environment:
+      - GF_AUTH_PROXY_ENABLED=true
+      - GF_PATHS_CONFIG=/etc/grafana/grafana.ini
+      - GF_PATHS_PROVISIONING=/var/lib/grafana/provisioning/
+    volumes:
+      - ./grafana/provisioning/:/var/lib/grafana/provisioning/
+      - ./grafana/grafana.ini:/etc/grafana/grafana.ini
+    ports:
+      - 3000:3000
+    depends_on:
+      - prometheus
