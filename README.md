@@ -17,22 +17,26 @@ This project also seeks to provide valuable insights into the operational behavi
 
 ## Goals
 
-- **Knowledge Validation:** Demonstrate proficiency in setting up and configuring Prometheus and Grafana for real-time monitoring and data visualization.
-- **Monitoring Key Metrics:** Track crucial metrics such as website availability, response times, and user activity on major airline websites.
-- **Data Visualization:** Create an informative Grafana dashboard that presents real-time and historical data in an easily interpretable format.
-- **Identifying Patterns:** Analyze the data collected to identify patterns such as peak usage hours, and understand how these patterns relate to real-life situations.
+- **Validating my knowledge:** Demonstrate proficiency in setting up and configuring Prometheus and Grafana for real-time monitoring and data visualization.
+- **Monitoring key metrics:** Track crucial metrics such as website availability, response times, and user activity on major airline websites.
+- **Visualizing data:** Create an informative Grafana dashboard that presents real-time and historical data in an easily interpretable format.
+- **Identifying Patterns: (Optional)** Analyze the data collected to identify patterns such as peak usage hours, and understand how these patterns relate to real-life situations.
 
 ## Milestones
-- **Phase 1: Initial Setup [COMPLETE]**
-  - Set up a basic Prometheus server.
-  - Configure Prometheus to scrape metrics from selected airline websites (see `prometheus.yaml`).
+- **Phase 1: Initial setup [COMPLETE]**
+  - Set up a basic Prometheus server + configure Prometheus to scrape metrics from selected airline websites (see `prometheus.yaml`).
   - Verify that metrics are being collected and stored correctly.
 
-- **Phase 2: Grafana Integration [IN PROGRESS]**
-  - Set up Grafana and connect it to the Prometheus data source.
-  - Create initial dashboards to visualize basic metrics like website uptime and response times.
+- **Phase 2: Grafana integration [COMPLETE]**
+  - Set up Grafana and manually connect it to the Prometheus data source.
+  - Create initial dashboards to visualize basic metrics.
+
+- **Phase 3: Automate Grafana dashboard provisioning + fine-tune dashboards [IN PROGRESS]**
+  - Configure Grafana provisioning of Prometheus data source and dashboards.
+  - Update dashboards to display key metrics.
 
 
 ## References
 - [Prometheus Blackbox Exporter](https://github.com/prometheus/blackbox_exporter)
 - [Understanding and using the multi-target exporter pattern](https://prometheus.io/docs/guides/multi-target-exporter/)
+- [Provision Grafana](https://grafana.com/docs/grafana/latest/administration/provisioning/)
