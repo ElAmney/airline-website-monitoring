@@ -1,5 +1,7 @@
 # Airline Website Monitoring
 
+![Grafana Dashboard Screenshot](./grafana-dashboard-screenshot.png)
+
 ## Overview
 This project is dedicated to monitoring the performance and availability of major airline websites using **Prometheus** and **Grafana**. The goal is to gather, analyze, and visualize data to ensure that these websites are operating efficiently and to detect any potential issues that may arise.
 
