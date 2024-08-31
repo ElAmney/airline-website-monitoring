@@ -26,11 +26,11 @@ This project also seeks to provide valuable insights into the operational behavi
   - ~~Set up a basic Prometheus server + configure Prometheus to scrape metrics from selected airline websites (see `prometheus.yaml`).~~
   - ~~Verify that metrics are being collected and stored correctly.~~
 
-- ~~**Phase 2: Grafana integration**~~ [COMPLETE]
+- ~~**Phase 2: Grafana integration**~~ **[COMPLETE]**
   - ~~Set up Grafana and manually connect it to the Prometheus data source.~~
   - ~~Create initial dashboard to visualize basic metrics.~~
 
-- ~~**Phase 3: Automate Grafana dashboard provisioning + fine-tune dashboards**~~ [COMPLETE]
+- ~~**Phase 3: Automate Grafana dashboard provisioning + fine-tune dashboards**~~ **[COMPLETE]**
   - ~~Configure Grafana provisioning of data source and dashboards.~~
   - ~~Clean up dashboard to visualize key metrics.~~
 
@@ -55,9 +55,9 @@ This project also seeks to provide valuable insights into the operational behavi
 ```
 
 4. The Grafana Dashboard is now accessible via: `http://localhost:3000/dashboards`
-```
-	username - admin
-	password - admin
+```bash
+  username - admin
+  password - admin
 ```
 
 ## References
