@@ -3,6 +3,7 @@
 ![Grafana Dashboard Screenshot](./grafana-dashboard-screenshot.png)
 
 ## Overview
+
 This project is dedicated to monitoring the performance and availability of major airline websites using **Prometheus** and **Grafana**. The goal is to gather, analyze, and visualize data to ensure that these websites are operating efficiently and to detect any potential issues that may arise.
 
 ## Technologies
@@ -24,6 +25,7 @@ This project also seeks to provide valuable insights into the operational behavi
 - **Visualizing data:** Create an informative Grafana dashboard that presents real-time and historical data in an easily interpretable format.
 
 ## Milestones
+
 - ~~**Phase 1: Initial setup**~~ **[COMPLETE]**
   - ~~Set up a basic Prometheus server + configure Prometheus to scrape metrics from selected airline websites (see `prometheus.yaml`).~~
   - ~~Verify that metrics are being collected and stored correctly.~~
@@ -37,32 +39,38 @@ This project also seeks to provide valuable insights into the operational behavi
   - ~~Clean up dashboard to visualize key metrics.~~
 
 ## Installation & Configuration
+
 1. Clone repo
-```bash
-  git clone https://github.com/ElAmney/airline-website-monitoring.git
-  cd airline-website-monitoring
-```
+
+    ```bash
+      git clone https://github.com/ElAmney/airline-website-monitoring.git
+      cd airline-website-monitoring
+    ```
 
 2. Depending on your OS, comment out the incorrect hostname in `prometheus/prometheus.yaml`
-```yaml
-  # For macOS and Windows
-  replacement: host.docker.internal:9115 
-  # For Linux
-  replacement: localhost:9115
-```
+
+    ```yaml
+      # For macOS and Windows
+      replacement: host.docker.internal:9115 
+      # For Linux
+      replacement: localhost:9115
+    ```
 
 3. Start Grafana and Prometheus
-```bash
-  docker compose up -d
-```
+
+    ```bash
+      docker compose up -d
+    ```
 
 4. The Grafana Dashboard is now accessible via: `http://localhost:3000/dashboards`
-```bash
-  username - admin
-  password - admin
-```
+
+    ```bash
+      username - admin
+      password - admin
+    ```
 
 ## References
+
 - [Prometheus Blackbox Exporter](https://github.com/prometheus/blackbox_exporter)
 - [Understanding and using the multi-target exporter pattern](https://prometheus.io/docs/guides/multi-target-exporter/)
 - [Provision Grafana](https://grafana.com/docs/grafana/latest/administration/provisioning/)
